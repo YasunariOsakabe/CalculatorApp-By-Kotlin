@@ -6,12 +6,11 @@
     android:padding="16dp"
     android:background="#FFFFFF">
 
-    <!-- 電卓ディスプレイ -->
+    <!-- 表示部 -->
     <TextView
-        android:id="@+id/calculator_display"
+        android:id="@+id/text_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:gravity="end"
         android:padding="24dp"
         android:text="0"
@@ -19,110 +18,106 @@
         android:textSize="32sp"
         android:background="#EEEEEE" />
 
-    <!-- ボタン行を含むグリッドレイアウト -->
+    <!-- ボタン群 -->
     <GridLayout
-        android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnCount="4"
-        android:rowCount="5">
+        android:rowCount="6"
+        android:paddingTop="16dp">
 
-        <!-- 数字ボタン -->
+        <!-- 1行目 -->
         <Button
-            android:id="@+id/button_7"
+            android:id="@+id/button_clear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="7" />
+            android:layout_columnSpan="4"
+            android:text="C"
+            android:textSize="24sp"
+            android:layout_gravity="fill"
+            android:layout_margin="4dp" />
+
+        <!-- 2行目 -->
+        <Button
+            android:id="@+id/button_7"
+            android:text="7"
+            style="@style/CalculatorButton" />
 
         <Button
             android:id="@+id/button_8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="8" />
+            android:text="8"
+            style="@style/CalculatorButton" />
 
         <Button
             android:id="@+id/button_9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="9" />
+            android:text="9"
+            style="@style/CalculatorButton" />
 
         <Button
             android:id="@+id/button_divide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="/" />
+            android:text="/"
+            style="@style/CalculatorButton" />
 
-        <!-- 次の行のボタン -->
+        <!-- 3行目 -->
         <Button
             android:id="@+id/button_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4" />
+            android:text="4"
+            style="@style/CalculatorButton" />
 
         <Button
             android:id="@+id/button_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5" />
+            android:text="5"
+            style="@style/CalculatorButton" />
 
         <Button
             android:id="@+id/button_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="6" />
+            android:text="6"
+            style="@style/CalculatorButton" />
 
         <Button
             android:id="@+id/button_multiply"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*" />
+            android:text="*"
+            style="@style/CalculatorButton" />
 
-        <!-- 次の行 -->
+        <!-- 4行目 -->
         <Button
             android:id="@+id/button_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1" />
+            android:text="1"
+            style="@style/CalculatorButton" />
 
         <Button
             android:id="@+id/button_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2" />
+            android:text="2"
+            style="@style/CalculatorButton" />
 
         <Button
             android:id="@+id/button_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3" />
+            android:text="3"
+            style="@style/CalculatorButton" />
 
         <Button
             android:id="@+id/button_minus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-" />
+            android:text="-"
+            style="@style/CalculatorButton" />
 
-        <!-- 最後の行 -->
+        <!-- 5行目 -->
         <Button
             android:id="@+id/button_0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_columnSpan="2"
-            android:text="0" />
+            android:text="0"
+            style="@style/CalculatorButton" />
 
         <Button
             android:id="@+id/button_dot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="." />
+            android:text="."
+            style="@style/CalculatorButton" />
 
         <Button
             android:id="@+id/button_plus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+" />
+            android:text="+"
+            style="@style/CalculatorButton" />
 
-        <!-- 計算ボタン -->
+        <!-- 6行目（計算ボタン） -->
         <Button
             android:id="@+id/button_equals"
             android:layout_width="match_parent"
@@ -130,6 +125,8 @@
             android:layout_columnSpan="4"
             android:text="="
             android:textColor="#FFFFFF"
-            android:background="#FF5722" />
+            android:textSize="24sp"
+            android:background="#FF5722"
+            android:layout_marginTop="8dp" />
     </GridLayout>
 </LinearLayout>
